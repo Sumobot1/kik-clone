@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+	<head>
+		<!-- Card info -->
+		<title>Kik Clone</title>
+		<meta name="description" content="UberRandomCard">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="kik-prefer" content="true">
+		<link rel="kik-icon" href="/img/icon.png">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="http://cdn.kik.com/app/2/app.min.css">
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+
+	<body>
+		<!-- Pages -->
+
+		<div class="app-page" data-page="home">
+			<div class="app-topbar">
+				<div class="app-title">Home page</div>
+				<div class="app-button right" data-target>Forward</div>
+			</div>
+			<div class="app-content">
+				<div class="app-section">
+					<div class="app-button" data-target="page2">Find my Friends</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="app-page" data-page="page2">
+			<div class="app-topbar">
+				<div class="app-button left" data-back="true">Back</div>
+				<div class="app-title">Page 2</div>
+				<div class="app-button right" id="friend-picker">select user</div>
+			</div>
+			<div class="app-content">
+
+				<div class="profile-picture"></div>
+				<div class="app-section">
+					<div class="app-button chat">Chat With Friend</div>
+				</div>
+				<ul class="app-list holder">
+					<li class="user-info username">Username</li>
+					<li class="user-info fullName">Full Name</li>
+					<li class="user-info firstName">First Name</li>
+					<li class="user-info lastName">Last Name</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="/zerver/API.js"></script>
+		<script src="http://zeptojs.com/zepto.min.js"></script>
+		<script src="http://cdn.kik.com/kik/1.0.7/kik.js"></script>
+		<script src="http://cdn.kik.com/app/2/app.min.js"></script>
+		<script src="/js/page-home.js"></script>
+		<script src="/js/page-2.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
